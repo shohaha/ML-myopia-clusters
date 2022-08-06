@@ -26,6 +26,42 @@ This activity is broken down into four parts:
 
 1. Read `myopia.csv` into a Pandas DataFrame.
 
+![](img/drop_col.png)
+
 2. Remove the "MYOPIC" column from the dataset.
 
+![](img/import_csv.png)
+
 3. Standardize your dataset so that columns that contain larger values do not influence the outcome more than columns with smaller values.
+
+![](img/standardise_data.png)
+
+### Part 2: Apply Dimensionality Reduction
+
+1. Perform dimensionality reduction with PCA. How did the number of the features change?
+
+Using `PCA(n_components=0.99)` creates a model that will preserve approximately 99% of the explained variance, whether that means reducing the dataset to 80 principal components.
+
+![](img/beforePCA.png)
+
+![](img/afterPCA.png)
+
+2. Further reduce the dataset dimensions with t-SNE and visually inspect the results. To do this, run t-SNE on the principal components, which is the output of the PCA transformation. 
+
+3. Create a scatter plot of the t-SNE output. Are there distinct clusters?
+
+![](img/pcaclusters.png)
+
+### Part 3: Perform a Cluster Analysis with K-means
+
+Create an elbow plot to identify the best number of clusters.
+
+![](img/plot_elbow_curve.png)
+
+* Use a `for` loop to determine the inertia for each `k` between 1 through 10. 
+
+* If possible, determine where the elbow of the plot is, and at which value of `k` it appears.
+
+### Part 4: Make a Recommendation
+
+Can the patients be clustered? If so, into how many clusters? 
