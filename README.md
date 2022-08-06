@@ -43,14 +43,14 @@ This activity is broken down into four parts:
 Using `PCA(n_components=0.99)` creates a model that will preserve approximately 99% of the explained variance, whether that means reducing the dataset to 80 principal components.
 
 ![](img/beforePCA.png)
-
+<br>
 ![](img/afterPCA.png)
 
 2. Further reduce the dataset dimensions with t-SNE and visually inspect the results. To do this, run t-SNE on the principal components, which is the output of the PCA transformation. 
 
 3. Create a scatter plot of the t-SNE output. Are there distinct clusters?
 
-![](img/pcaclusters.png)
+![](img/pcaClusters.png)
 
 ### Part 3: Perform a Cluster Analysis with K-means
 
